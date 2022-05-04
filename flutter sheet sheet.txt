@@ -1,0 +1,16 @@
+flutter architecturial layers
+ WidgetsFlutterBinding.ensureInitialized();
+
+future builder
+https://console.firebase.google.com/
+
+
+
+git
+make folder a git repisitory 
+git init .
+git status ///give current status of repository
+git add file.txt // add file to git
+git commit -m "message about the commit"
+git log ///will show all the commits that were made
+git add --all //add all new files to git

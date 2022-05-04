@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "401496379965",
+    "project_id": "phants-notes",
+    "storage_bucket": "phants-notes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:401496379965:android:05e2695673e95707489054",
+        "android_client_info": {
+          "package_name": "com.example.testproje"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "401496379965-otb3huveo0amdqrl5802k2h3j4ha5iva.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACMPiv5o9I5PC16hgE0lIVvNQ_O78I9jw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "401496379965-otb3huveo0amdqrl5802k2h3j4ha5iva.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
