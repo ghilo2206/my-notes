@@ -12,5 +12,13 @@ git init .
 git status ///give current status of repository
 git add file.txt // add file to git
 git commit -m "message about the commit"
+
 git log ///will show all the commits that were made
 git add --all //add all new files to git
+
+>git remote add origin https://github.com/ghilo2206/my-notes.git  //pushes code onlin
+>git push
+git push --set-upstream origin main
+git push -u origin HEAD -f //pushes code to github and overwrites existing files with same name
+
+github.com/flutter/flutter/issues/16218
