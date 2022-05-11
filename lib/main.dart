@@ -12,7 +12,7 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(
     MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Notes App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -76,8 +76,20 @@ class _NotesViewsState extends State<NotesViews> {
         title: const Text('My Notes'),
         actions: [
           PopupMenuButton<MenuAction>(
-            onSelected: (value) {
-              devtools.log(value.toString());
+            onSelected: (value) async {
+              switch(value){
+
+                case MenuAction.logout:
+                  final shouldLogout = await showLogOutDialog(context);
+                  if (shouldLogout){
+                    await FirebaseAuth.instance.signOut();
+                    Navigator.of(context).pushNamedAndRemoveUntil(
+                        '/login/',
+                            (_) => false
+                    );
+                  }
+                  break;
+              }
             },
             itemBuilder: (context) {
               return const [
@@ -97,4 +109,24 @@ class _NotesViewsState extends State<NotesViews> {
       ),
     );
   }
+}
+
+Future<bool> showLogOutDialog(BuildContext context){
+  return showDialog(
+      context: context,
+      builder: (context){
+        return AlertDialog(
+          title: const Text('Sign out'),
+          content: const Text('Are you sure you want to sign out'),
+          actions:[
+            TextButton(onPressed: (){
+              Navigator.of(context).pop(false);
+            }, child: const Text('Cancel')),
+            TextButton(onPressed: (){
+              Navigator.of(context).pop(true);
+            }, child: const Text('Logout')),
+          ]
+        );
+      },
+  ).then((value) => value ?? false);
 }
