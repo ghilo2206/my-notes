@@ -26,3 +26,7 @@ git tag "msg"
 git push --tags
 github.com/flutter/flutter/issues/16218
 git diff // all the changes made
+
+
+///clean up exceptions
+create file lib/services/auth/auth_exception.dart
