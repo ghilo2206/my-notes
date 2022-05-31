@@ -30,3 +30,9 @@ git diff // all the changes made
 
 ///clean up exceptions
 create file lib/services/auth/auth_exception.dart
+
+
+//add test depedency
+flutter pub add test --dev
+// run tests
+flutter test test/auth_test.dart
